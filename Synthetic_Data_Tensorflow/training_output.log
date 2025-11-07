@@ -1,0 +1,169 @@
+2025-11-07 15:49:52.163134: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-07 15:49:52.238671: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-07 15:49:53.549578: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762510794.958245  117019 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22398 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+1
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+t_min_random = 0.20134228467941284, t_max_random = 1.0
+k_min_random = 0.15696077048778534, k_max_random = 0.9879921674728394
+t_min_random = 0.2, t_max_random = 1.0
+k_min_random = 0.15, k_max_random = 0.99
+loss_phi = 0.558381974697113, computation time = 0.12413620948791504
+loss_dupire = 0.00264655495993793, loss_reg = 0.0, computation time = 0.07447528839111328
+computation time = 7.509377956390381
+loss_phi = 0.5553832650184631, loss_dupire = 0.0026486406568437815, loss_reg = 0.0
+
+computation time = 0.03922700881958008
+loss_phi = 0.4989614188671112, loss_dupire = 0.0017182313604280353, loss_reg = 0.0
+
+iter = 0, lambda = 1.0: loss_phi = 0.45338869094848633, loss_dupire = 0.0014831781154498458, error_sigma = 0.5816487669944763, rmse_fit = 156.13455200195312
+iter = 2500, lambda = 1.0: loss_phi = 2.278532338095829e-05, loss_dupire = 2.6009649900515797e-06, error_sigma = 0.08906222134828568, rmse_fit = 1.998563528060913
+iter = 5000, lambda = 1.0: loss_phi = 5.6744688663457055e-06, loss_dupire = 6.397889933396073e-07, error_sigma = 0.0888504907488823, rmse_fit = 0.9197642207145691
+iter = 7500, lambda = 1.0: loss_phi = 9.108350695896661e-07, loss_dupire = 4.41950561480553e-07, error_sigma = 0.08806739747524261, rmse_fit = 0.286312073469162
+iter = 10000, lambda = 1.0: loss_phi = 8.010472356545506e-07, loss_dupire = 2.6317451329305186e-07, error_sigma = 0.07588741183280945, rmse_fit = 0.5829907655715942
+iter = 12500, lambda = 1.0: loss_phi = 4.7248795453924686e-07, loss_dupire = 1.664664353029366e-07, error_sigma = 0.06561169028282166, rmse_fit = 0.31271398067474365
+iter = 15000, lambda = 1.0: loss_phi = 8.284158070637204e-07, loss_dupire = 6.637990281888051e-07, error_sigma = 0.058547403663396835, rmse_fit = 0.48147037625312805
+iter = 17500, lambda = 1.0: loss_phi = 8.355582394869998e-07, loss_dupire = 1.3754170140600763e-06, error_sigma = 0.057880137115716934, rmse_fit = 0.7000508904457092
+iter = 20000, lambda = 1.0: loss_phi = 4.0990175875776913e-07, loss_dupire = 1.071087240234192e-06, error_sigma = 0.06096074357628822, rmse_fit = 0.600727915763855
+iter = 22500, lambda = 1.0: loss_phi = 6.760034921171609e-06, loss_dupire = 4.6659084773637005e-07, error_sigma = 0.06287359446287155, rmse_fit = 1.8530927896499634
+iter = 25000, lambda = 1.0: loss_phi = 6.003047019476071e-07, loss_dupire = 1.8000843056142912e-06, error_sigma = 0.06523088365793228, rmse_fit = 0.3161303699016571
+iter = 27500, lambda = 1.0: loss_phi = 4.609518811093949e-08, loss_dupire = 9.02888714904293e-08, error_sigma = 0.0664810985326767, rmse_fit = 0.13112232089042664
+iter = 30000, lambda = 1.0: loss_phi = 2.3587128339386254e-07, loss_dupire = 8.962364006492862e-08, error_sigma = 0.06750734895467758, rmse_fit = 0.17371371388435364
+relative rmse at the end of the training = 0.07603637874126434
+smallest relative rmse during the training = 0.06671085208654404
+relative error at the end of the training = 0.06750734895467758
+smallest relative error during the training = 0.05634687840938568
+0
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+t_min_random = 0.20134228467941284, t_max_random = 1.0
+k_min_random = 0.15696077048778534, k_max_random = 0.9879921674728394
+t_min_random = 0.2, t_max_random = 1.0
+k_min_random = 0.15, k_max_random = 0.99
+loss_phi = 0.824499249458313, computation time = 0.05432319641113281
+loss_dupire = 0.0112668601796031, loss_reg = 0.0, computation time = 0.1157832145690918
+computation time = 7.318089962005615
+loss_phi = 0.8206949234008789, loss_dupire = 0.011336013674736023, loss_reg = 0.0
+
+computation time = 0.03022027015686035
+loss_phi = 0.7491751909255981, loss_dupire = 0.00968107394874096, loss_reg = 0.0
+
+iter = 0, lambda = 0.0: loss_phi = 0.6803616881370544, loss_dupire = 0.008145256899297237, error_sigma = 0.44403278827667236, rmse_fit = 207.3385772705078
+iter = 2500, lambda = 0.0: loss_phi = 1.5081066521815956e-05, loss_dupire = 0.0006269245059229434, error_sigma = 0.3316635191440582, rmse_fit = 1.2095510959625244
+iter = 5000, lambda = 0.0: loss_phi = 1.768583751982078e-05, loss_dupire = 0.0013148336438462138, error_sigma = 0.310716450214386, rmse_fit = 2.093780279159546
+iter = 7500, lambda = 0.0: loss_phi = 4.1806852095760405e-06, loss_dupire = 0.0019523428054526448, error_sigma = 0.4286700189113617, rmse_fit = 0.5915707349777222
+iter = 10000, lambda = 0.0: loss_phi = 3.2314949294232065e-07, loss_dupire = 0.002329399809241295, error_sigma = 0.38957491517066956, rmse_fit = 0.2510170638561249
+iter = 12500, lambda = 0.0: loss_phi = 3.574202764866641e-06, loss_dupire = 0.004395581781864166, error_sigma = 0.3312216103076935, rmse_fit = 1.3849496841430664
+iter = 15000, lambda = 0.0: loss_phi = 3.6015779869558173e-07, loss_dupire = 0.0036969101056456566, error_sigma = 0.30522793531417847, rmse_fit = 0.29024186730384827
+iter = 17500, lambda = 0.0: loss_phi = 9.288548312724743e-07, loss_dupire = 0.0035946383140981197, error_sigma = 0.3232356607913971, rmse_fit = 0.4335925579071045
+iter = 20000, lambda = 0.0: loss_phi = 2.180510421112558e-07, loss_dupire = 0.0030479675624519587, error_sigma = 0.2871428430080414, rmse_fit = 0.2408728450536728
+iter = 22500, lambda = 0.0: loss_phi = 5.705997523364204e-07, loss_dupire = 0.003052417654544115, error_sigma = 0.30205678939819336, rmse_fit = 0.45725342631340027
+iter = 25000, lambda = 0.0: loss_phi = 5.248973138805013e-06, loss_dupire = 0.0030669914558529854, error_sigma = 0.3519788980484009, rmse_fit = 1.0310490131378174
+iter = 27500, lambda = 0.0: loss_phi = 3.1731363492326636e-07, loss_dupire = 0.0025695881340652704, error_sigma = 0.30770108103752136, rmse_fit = 0.43990200757980347
+iter = 30000, lambda = 0.0: loss_phi = 7.011283287283732e-08, loss_dupire = 0.002287169685587287, error_sigma = 0.33259427547454834, rmse_fit = 0.10958855599164963
+relative rmse at the end of the training = 0.48435860872268677
+smallest relative rmse during the training = 0.1531842052936554
+relative error at the end of the training = 0.33259427547454834
+smallest relative error during the training = 0.11221182346343994
+0.5
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+t_min_random = 0.20134228467941284, t_max_random = 1.0
+k_min_random = 0.15696077048778534, k_max_random = 0.9879921674728394
+t_min_random = 0.2, t_max_random = 1.0
+k_min_random = 0.15, k_max_random = 0.99
+loss_phi = 0.41398298740386963, computation time = 0.03150224685668945
+loss_dupire = 0.09077579528093338, loss_reg = 0.06566794216632843, computation time = 0.06834745407104492
+computation time = 6.551581382751465
+loss_phi = 0.42784571647644043, loss_dupire = 0.09069021791219711, loss_reg = 0.06522097438573837
+
+computation time = 0.030134201049804688
+loss_phi = 0.3793141543865204, loss_dupire = 0.08657126873731613, loss_reg = 0.059901751577854156
+
+iter = 0, lambda = 0.5: loss_phi = 0.34245026111602783, loss_dupire = 0.08135348558425903, error_sigma = 0.7285578846931458, rmse_fit = 155.20603942871094
+iter = 2500, lambda = 0.5: loss_phi = 1.8364295101491734e-05, loss_dupire = 4.593455741996877e-06, error_sigma = 0.08728597313165665, rmse_fit = 1.7380889654159546
+iter = 5000, lambda = 0.5: loss_phi = 8.2269771155552e-06, loss_dupire = 5.9373819567554165e-06, error_sigma = 0.07014523446559906, rmse_fit = 1.2210313081741333
+iter = 7500, lambda = 0.5: loss_phi = 1.7190620837936876e-06, loss_dupire = 4.6376075601983757e-07, error_sigma = 0.05940058454871178, rmse_fit = 0.264310747385025
+iter = 10000, lambda = 0.5: loss_phi = 5.80562357299641e-07, loss_dupire = 6.511418746413256e-07, error_sigma = 0.057907745242118835, rmse_fit = 0.21865315735340118
+iter = 12500, lambda = 0.5: loss_phi = 4.745309070131043e-07, loss_dupire = 1.3784678003503359e-06, error_sigma = 0.06085072457790375, rmse_fit = 0.29025885462760925
+iter = 15000, lambda = 0.5: loss_phi = 2.1977754727231513e-07, loss_dupire = 1.1723459465429187e-06, error_sigma = 0.06202319636940956, rmse_fit = 0.1316784769296646
+iter = 17500, lambda = 0.5: loss_phi = 1.0132389434147626e-06, loss_dupire = 6.668651622021571e-07, error_sigma = 0.06299534440040588, rmse_fit = 0.5640847086906433
+iter = 20000, lambda = 0.5: loss_phi = 1.5208981096748175e-07, loss_dupire = 2.0412358026078437e-07, error_sigma = 0.06388778984546661, rmse_fit = 0.4263932406902313
+iter = 22500, lambda = 0.5: loss_phi = 1.305529622186441e-07, loss_dupire = 1.1477677475113524e-07, error_sigma = 0.06529679894447327, rmse_fit = 0.37954896688461304
+iter = 25000, lambda = 0.5: loss_phi = 5.495094228535891e-07, loss_dupire = 3.58561646862654e-06, error_sigma = 0.06504765897989273, rmse_fit = 0.3702753782272339
+iter = 27500, lambda = 0.5: loss_phi = 1.2591917197823932e-07, loss_dupire = 3.15205113565753e-07, error_sigma = 0.06585553288459778, rmse_fit = 0.4076477289199829
+iter = 30000, lambda = 0.5: loss_phi = 1.1837428246508352e-05, loss_dupire = 1.6970518572634319e-06, error_sigma = 0.06732943654060364, rmse_fit = 2.299940586090088
+relative rmse at the end of the training = 0.07072348892688751
+smallest relative rmse during the training = 0.05360819399356842
+relative error at the end of the training = 0.06732943654060364
+smallest relative error during the training = 0.04698038101196289
+1.5
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+t_min_random = 0.20134228467941284, t_max_random = 1.0
+k_min_random = 0.15696077048778534, k_max_random = 0.9879921674728394
+t_min_random = 0.2, t_max_random = 1.0
+k_min_random = 0.15, k_max_random = 0.99
+loss_phi = 1.003464937210083, computation time = 0.03280377388000488
+loss_dupire = 0.1516907662153244, loss_reg = 0.0, computation time = 0.06636404991149902
+computation time = 6.050195693969727
+loss_phi = 1.020632266998291, loss_dupire = 0.15131457149982452, loss_reg = 0.0
+
+computation time = 0.032155752182006836
+loss_phi = 0.9233497977256775, loss_dupire = 0.15241649746894836, loss_reg = 0.0
+
+iter = 0, lambda = 1.5: loss_phi = 0.8311077952384949, loss_dupire = 0.1506650149822235, error_sigma = 0.25330787897109985, rmse_fit = 226.6370849609375
+iter = 2500, lambda = 1.5: loss_phi = 6.064109766157344e-05, loss_dupire = 7.286523668881273e-06, error_sigma = 0.09564883261919022, rmse_fit = 4.2555952072143555
+iter = 5000, lambda = 1.5: loss_phi = 1.1738164175767452e-05, loss_dupire = 1.4433265960178687e-06, error_sigma = 0.06496979296207428, rmse_fit = 1.7348129749298096
+iter = 7500, lambda = 1.5: loss_phi = 3.126762521787896e-06, loss_dupire = 1.0961874750137213e-06, error_sigma = 0.05123360455036163, rmse_fit = 0.9036417007446289
+iter = 10000, lambda = 1.5: loss_phi = 5.325678102963138e-07, loss_dupire = 5.312631969900394e-07, error_sigma = 0.05752549692988396, rmse_fit = 0.3869205415248871
+iter = 12500, lambda = 1.5: loss_phi = 6.038696938048815e-07, loss_dupire = 7.419251346618694e-07, error_sigma = 0.06231335178017616, rmse_fit = 0.3926064372062683
+iter = 15000, lambda = 1.5: loss_phi = 7.695459771639435e-07, loss_dupire = 5.387233272813319e-07, error_sigma = 0.0656919777393341, rmse_fit = 0.4131578505039215
+iter = 17500, lambda = 1.5: loss_phi = 1.9710975607267756e-07, loss_dupire = 1.7402621210749203e-07, error_sigma = 0.06524734199047089, rmse_fit = 0.37369558215141296
+iter = 20000, lambda = 1.5: loss_phi = 1.184921529784333e-07, loss_dupire = 4.714071977218737e-08, error_sigma = 0.06482712924480438, rmse_fit = 0.12193090468645096
+iter = 22500, lambda = 1.5: loss_phi = 5.127817530592438e-07, loss_dupire = 1.0777473562484374e-06, error_sigma = 0.06291711330413818, rmse_fit = 0.4118892550468445
+iter = 25000, lambda = 1.5: loss_phi = 1.3242208751762519e-07, loss_dupire = 2.7788354373115e-07, error_sigma = 0.0626082718372345, rmse_fit = 1.0770065784454346
+iter = 27500, lambda = 1.5: loss_phi = 2.455865626416198e-07, loss_dupire = 3.2345781164622167e-07, error_sigma = 0.061748113483190536, rmse_fit = 0.33709368109703064
+iter = 30000, lambda = 1.5: loss_phi = 1.8367191501056368e-07, loss_dupire = 6.287351084210968e-07, error_sigma = 0.06081052124500275, rmse_fit = 0.2515271306037903
+relative rmse at the end of the training = 0.0679837167263031
+smallest relative rmse during the training = 0.056871384382247925
+relative error at the end of the training = 0.06081052124500275
+smallest relative error during the training = 0.04874437674880028
+2
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+t_min_random = 0.20134228467941284, t_max_random = 1.0
+k_min_random = 0.15696077048778534, k_max_random = 0.9879921674728394
+t_min_random = 0.2, t_max_random = 1.0
+k_min_random = 0.15, k_max_random = 0.99
+loss_phi = 0.9053972363471985, computation time = 0.031598567962646484
+loss_dupire = 0.006719475612044334, loss_reg = 0.008993027731776237, computation time = 0.06574130058288574
+computation time = 7.020775556564331
+loss_phi = 0.9142715930938721, loss_dupire = 0.006649661809206009, loss_reg = 0.008962721563875675
+
+computation time = 0.03356122970581055
+loss_phi = 0.8456102013587952, loss_dupire = 0.00833794753998518, loss_reg = 0.009341578930616379
+
+iter = 0, lambda = 2.0: loss_phi = 0.7672677040100098, loss_dupire = 0.010112638585269451, error_sigma = 0.8312094211578369, rmse_fit = 215.85482788085938
+iter = 2500, lambda = 2.0: loss_phi = 4.530819569481537e-05, loss_dupire = 4.967102995578898e-06, error_sigma = 0.0969262644648552, rmse_fit = 3.5302205085754395
+iter = 5000, lambda = 2.0: loss_phi = 2.0687595679191872e-05, loss_dupire = 3.458487844909541e-05, error_sigma = 0.07748818397521973, rmse_fit = 3.2231884002685547
+iter = 7500, lambda = 2.0: loss_phi = 2.4158503038052004e-06, loss_dupire = 6.533520036100526e-07, error_sigma = 0.07501266151666641, rmse_fit = 0.9720562100410461
+iter = 10000, lambda = 2.0: loss_phi = 1.828119366109604e-06, loss_dupire = 1.053323899213865e-06, error_sigma = 0.07311501353979111, rmse_fit = 0.6984326243400574
+iter = 12500, lambda = 2.0: loss_phi = 6.555098934768466e-07, loss_dupire = 8.026421483009472e-07, error_sigma = 0.06918348371982574, rmse_fit = 0.6081279516220093
+iter = 15000, lambda = 2.0: loss_phi = 2.130553582446737e-07, loss_dupire = 8.763782233245365e-08, error_sigma = 0.06300830841064453, rmse_fit = 0.2333182692527771
+iter = 17500, lambda = 2.0: loss_phi = 4.801194108949858e-07, loss_dupire = 2.8666261187026976e-07, error_sigma = 0.05915575474500656, rmse_fit = 0.8094556927680969
+iter = 20000, lambda = 2.0: loss_phi = 1.7450204836677585e-07, loss_dupire = 2.736533986080758e-07, error_sigma = 0.05795735865831375, rmse_fit = 0.18572895228862762
+iter = 22500, lambda = 2.0: loss_phi = 2.5178161422445555e-07, loss_dupire = 7.584942096627856e-08, error_sigma = 0.05795278772711754, rmse_fit = 0.1564292460680008
+iter = 25000, lambda = 2.0: loss_phi = 7.232879397633951e-07, loss_dupire = 2.7852627226820914e-07, error_sigma = 0.05792580172419548, rmse_fit = 0.2365669161081314
+iter = 27500, lambda = 2.0: loss_phi = 7.490560847145389e-07, loss_dupire = 1.7464966504121548e-06, error_sigma = 0.057815730571746826, rmse_fit = 0.545343279838562
+iter = 30000, lambda = 2.0: loss_phi = 8.819692425277026e-07, loss_dupire = 1.6785417074061115e-06, error_sigma = 0.05954009294509888, rmse_fit = 0.4810275435447693
+relative rmse at the end of the training = 0.06792619824409485
+smallest relative rmse during the training = 0.06458572298288345
+relative error at the end of the training = 0.05954009294509888
+smallest relative error during the training = 0.05474734678864479
