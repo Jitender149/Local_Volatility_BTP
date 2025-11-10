@@ -34,10 +34,6 @@ batch_call_DAX_*/
 batch_put_SPX_*/
 synthetic_data_*/
 implied_vol_small_dataset_*/
-implied_vol_*/
-local_vol_pinn_*/
-tf_PINN_IVSurface_*/
-tf_iv_pipeline_*/
 
 # Logs
 *.log
