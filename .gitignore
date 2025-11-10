@@ -1,0 +1,45 @@
+# Python environment
+poorpeople-env-py310/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data and results
+*.csv
+*.npy
+*.npz
+*.h5
+*.keras
+batch_call_MC_ldup_*/
+batch_call_DAX_*/
+batch_put_SPX_*/
+synthetic_data_*/
+implied_vol_small_dataset_*/
+implied_vol_*/
+local_vol_pinn_*/
+tf_PINN_IVSurface_*/
+tf_iv_pipeline_*/
+
+# Logs
+*.log
+nohup.out
+*.pid
