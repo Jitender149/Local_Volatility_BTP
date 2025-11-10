@@ -1,0 +1,41 @@
+/home/tanveer/.local/lib/python3.10/site-packages/torch/autograd/graph.py:841: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:270.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Simulation is running on: cuda
+
+Starting Local Volatility PINN Training (PyTorch)
+
+Loss weights: lambda_data=1.0, lambda_pde=0.0001, lambda_bc=0.001, lambda_ic=0.001
+Learning rate: 0.001, Epochs: 20000
+
+Generating training data...
+Data points: 1000
+Collocation points: 2000
+Boundary condition points: 400
+Initial condition points: 200
+
+Training Local Volatility PINN ...
+
+Epoch 00000 | Total Loss = 0.428826 | Data=0.423442 | PDE=0.000579 | BC=4.377015 | IC=1.007489
+Epoch 01000 | Total Loss = 0.001336 | Data=0.000553 | PDE=0.003417 | BC=0.672030 | IC=0.111400
+Epoch 02000 | Total Loss = 0.000802 | Data=0.000118 | PDE=0.005761 | BC=0.570930 | IC=0.112262
+Epoch 03000 | Total Loss = 0.000713 | Data=0.000063 | PDE=0.005899 | BC=0.542660 | IC=0.107080
+Epoch 04000 | Total Loss = 0.000712 | Data=0.000071 | PDE=0.005858 | BC=0.534401 | IC=0.105216
+Epoch 05000 | Total Loss = 0.000696 | Data=0.000055 | PDE=0.005833 | BC=0.533786 | IC=0.106528
+Epoch 06000 | Total Loss = 0.000689 | Data=0.000053 | PDE=0.005835 | BC=0.528385 | IC=0.106503
+Epoch 07000 | Total Loss = 0.000684 | Data=0.000050 | PDE=0.005879 | BC=0.527335 | IC=0.106437
+Epoch 08000 | Total Loss = 0.000677 | Data=0.000046 | PDE=0.005902 | BC=0.523893 | IC=0.106399
+Epoch 09000 | Total Loss = 0.000673 | Data=0.000038 | PDE=0.005963 | BC=0.527722 | IC=0.106994
+Epoch 10000 | Total Loss = 0.000696 | Data=0.000050 | PDE=0.006092 | BC=0.535909 | IC=0.109369
+Epoch 11000 | Total Loss = 0.000666 | Data=0.000049 | PDE=0.006071 | BC=0.511654 | IC=0.105179
+Epoch 12000 | Total Loss = 0.000644 | Data=0.000026 | PDE=0.006550 | BC=0.512306 | IC=0.105077
+Epoch 13000 | Total Loss = 0.000640 | Data=0.000027 | PDE=0.006776 | BC=0.507984 | IC=0.104843
+Epoch 14000 | Total Loss = 0.000638 | Data=0.000028 | PDE=0.006881 | BC=0.504474 | IC=0.104855
+Epoch 15000 | Total Loss = 0.000636 | Data=0.000029 | PDE=0.006867 | BC=0.500756 | IC=0.105057
+Epoch 16000 | Total Loss = 0.000632 | Data=0.000030 | PDE=0.006796 | BC=0.496312 | IC=0.105337
+Epoch 17000 | Total Loss = 0.000628 | Data=0.000032 | PDE=0.006750 | BC=0.490132 | IC=0.105628
+Epoch 18000 | Total Loss = 0.000623 | Data=0.000035 | PDE=0.006786 | BC=0.481387 | IC=0.105653
+Epoch 19000 | Total Loss = 0.000616 | Data=0.000040 | PDE=0.006979 | BC=0.469261 | IC=0.105544
+Epoch 20000 | Total Loss = 0.000608 | Data=0.000043 | PDE=0.007344 | BC=0.459027 | IC=0.105528
+
+Training completed!
+Results saved in: local_vol_pinn_pytorch_2025_11_08_15_51

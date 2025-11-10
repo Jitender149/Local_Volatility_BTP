@@ -1,0 +1,33 @@
+2025-11-09 16:12:37.148255: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 16:12:37.218888: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-09 16:12:38.552292: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762684959.833207  321328 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22272 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+Starting Sigma-Price Network Training
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+Training data shape: SKT=(18, 3), P=(18, 1)
+S range: [1000.00, 1000.00]
+K range: [500.00, 3000.00]
+T range: [0.30, 1.50]
+
+loss_price = 55932.0859375, computation time = 0.0852499008178711
+loss_smooth = 6.563296892636572e-07, computation time = 0.5465805530548096
+Traceback (most recent call last):
+  File "/home/tanveer/poorpeople/LocalVolatility/ImpliedVolatility/tf_sigma_price_network.py", line 632, in <module>
+    main()
+  File "/home/tanveer/poorpeople/LocalVolatility/ImpliedVolatility/tf_sigma_price_network.py", line 627, in main
+    trainer.test()
+  File "/home/tanveer/poorpeople/LocalVolatility/ImpliedVolatility/tf_sigma_price_network.py", line 510, in test
+    loss_pde = physics.loss_pde()
+  File "/home/tanveer/poorpeople/LocalVolatility/ImpliedVolatility/tf_sigma_price_network.py", line 334, in loss_pde
+    residual = V_T + 0.5 * (sigma_local**2) * (Sc**2) * V_SS + r_val * Sc * V_S - r_val * V
+  File "/home/tanveer/.local/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/tanveer/.local/lib/python3.10/site-packages/tensorflow/python/framework/constant_op.py", line 108, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+ValueError: Attempt to convert a value (None) with an unsupported type (<class 'NoneType'>) to a Tensor.

@@ -1,0 +1,41 @@
+2025-11-08 14:38:33.210795: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-08 14:38:33.258991: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-08 14:38:34.537816: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762592915.599975   62577 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21942 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+Starting Implied Volatility Training
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+Training data shape: KT=(18, 2), P=(18, 1)
+K range: [500.00, 3000.00]
+T range: [0.30, 1.50]
+
+loss_phi = 73908.4140625, computation time = 0.08969807624816895
+loss_smooth = 0.0, computation time = 0.004952192306518555
+computation time = 2.223083972930908
+loss_phi = 73908.4140625, loss_smooth = 0.0
+
+computation time = 0.009418725967407227
+loss_phi = 66940.6640625, loss_smooth = 0.0
+
+iter = 0, lambda_smooth = 0.0010000000474974513: loss_phi = 60804.234375, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 213.91758728027344
+iter = 2500, lambda_smooth = 0.0010000000474974513: loss_phi = 109.03756713867188, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 10.648797988891602
+iter = 5000, lambda_smooth = 0.0010000000474974513: loss_phi = 13.651799201965332, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 3.559142827987671
+iter = 7500, lambda_smooth = 0.0010000000474974513: loss_phi = 4.34527587890625, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 2.084441900253296
+iter = 10000, lambda_smooth = 0.0010000000474974513: loss_phi = 7.453030109405518, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 2.6111960411071777
+iter = 12500, lambda_smooth = 0.0010000000474974513: loss_phi = 1.939455509185791, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 1.2891111373901367
+iter = 15000, lambda_smooth = 0.0010000000474974513: loss_phi = 0.6463122963905334, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.8039065599441528
+iter = 17500, lambda_smooth = 0.0010000000474974513: loss_phi = 1.2276592254638672, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 1.1070563793182373
+iter = 20000, lambda_smooth = 0.0010000000474974513: loss_phi = 0.5317924618721008, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.7296273112297058
+iter = 22500, lambda_smooth = 0.0010000000474974513: loss_phi = 0.44199642539024353, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.6646525859832764
+iter = 25000, lambda_smooth = 0.0010000000474974513: loss_phi = 0.38062524795532227, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.614446222782135
+iter = 27500, lambda_smooth = 0.0010000000474974513: loss_phi = 0.2366127222776413, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.48410409688949585
+iter = 30000, lambda_smooth = 0.0010000000474974513: loss_phi = 0.08969774842262268, loss_smooth = 0.0, error_sigma = 0.9999966025352478, rmse_fit = 0.29408180713653564
+relative rmse at the end of the training = 1.0
+smallest relative rmse during the training = 1.0
+relative error at the end of the training = 0.9999966025352478
+smallest relative error during the training = 0.9999966025352478

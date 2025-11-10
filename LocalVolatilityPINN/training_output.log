@@ -1,0 +1,46 @@
+2025-11-08 15:46:35.918573: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-08 15:46:35.968146: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-08 15:46:37.245455: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762596998.321851   83400 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22398 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+Starting Local Volatility PINN Training
+
+Loss weights: lambda_data=1.0, lambda_pde=0.0001, lambda_bc=0.001, lambda_ic=0.001
+Learning rate: 0.001, Epochs: 20000
+
+Generating training data...
+Data points: 1000
+Collocation points: 2000
+Boundary condition points: 400
+Initial condition points: 200
+
+Training Local Volatility PINN ...
+
+Traceback (most recent call last):
+  File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn.py", line 416, in <module>
+    main()
+  File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn.py", line 277, in main
+    total_loss, components = pinn.train_step(data, bc, ic)
+  File "/home/tanveer/.local/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/tmp/__autograph_generated_file2fnwbvvi.py", line 11, in tf__train_step
+    (total_loss, components) = ag__.converted_call(ag__.ld(self).total_loss, (ag__.ld(data), ag__.ld(bc), ag__.ld(ic)), None, fscope)
+  File "/tmp/__autograph_generated_file6d034ae7.py", line 16, in tf__total_loss
+    L_pde = ag__.converted_call(ag__.ld(self).loss_pde, (ag__.ld(S_colloc), ag__.ld(t_colloc)), None, fscope)
+  File "/tmp/__autograph_generated_filel_aks2pg.py", line 19, in tf__loss_pde
+    pde_res = ag__.ld(V_t) + 0.5 * ag__.ld(sigma) ** 2 * ag__.ld(S) ** 2 * ag__.ld(V_SS) + ag__.ld(self).r * ag__.ld(S) * ag__.ld(V_S) - ag__.ld(self).r * ag__.ld(V)
+ValueError: in user code:
+
+    File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn.py", line 242, in train_step  *
+        total_loss, components = self.total_loss(data, bc, ic)
+    File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn.py", line 218, in total_loss  *
+        L_pde = self.loss_pde(S_colloc, t_colloc)
+    File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn.py", line 203, in loss_pde  *
+        pde_res = V_t + 0.5 * sigma**2 * S**2 * V_SS + self.r * S * V_S - self.r * V
+
+    ValueError: Tried to convert 'y' to a tensor and failed. Error: None values not supported.
+

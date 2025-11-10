@@ -1,0 +1,43 @@
+2025-11-08 17:08:20.022661: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-08 17:08:20.091685: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-08 17:08:21.874544: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762601903.121739  107635 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22398 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+2025-11-08 17:26:03.503185: W tensorflow/core/framework/op_kernel.cc:1842] INVALID_ARGUMENT: required broadcastable shapes
+2025-11-08 17:26:03.503231: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: INVALID_ARGUMENT: required broadcastable shapes
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+Starting Local Volatility PINN 2-Step Training
+
+Loss weights: lambda_data=1.0, lambda_pde=0.0001, lambda_smooth=0.001
+Learning rate: 0.001, Epochs: 30000
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+Training data shape: K=(18, 1), T=(18, 1), C=(18, 1)
+K range: [500.00, 3000.00]
+T range: [0.30, 1.50]
+
+Collocation points: 2000
+
+Training Step 1: Learning the Price Surface C(K, T)...
+(Step 2: Local volatility computed via Dupire's equation during training)
+
+Epoch 00000 | Total Loss = 60758.289062 | Data=60758.277344 | PDE=120.619270 | Smooth=0.094805 | RMSE=246.416992
+Epoch 02500 | Total Loss = 32144.693359 | Data=32140.035156 | PDE=13493.238281 | Smooth=3308.774902 | RMSE=179.252472
+Epoch 05000 | Total Loss = 15496.019531 | Data=15481.129883 | PDE=28264.853516 | Smooth=12063.261719 | RMSE=124.401634
+Epoch 07500 | Total Loss = 18258.517578 | Data=18225.777344 | PDE=55374.832031 | Smooth=27202.572266 | RMSE=134.984940
+Epoch 10000 | Total Loss = 10987.269531 | Data=10958.485352 | PDE=59480.851562 | Smooth=22836.312500 | RMSE=104.681656
+Traceback (most recent call last):
+  File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn_2step.py", line 503, in <module>
+    main()
+  File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn_2step.py", line 480, in main
+    _plot_surfaces(price_model, dirname, epoch, K_nn, T_nn, phi_ref, processdata)
+  File "/home/tanveer/poorpeople/LocalVolatility/LocalVolatilityPINN/tf_local_vol_pinn_2step.py", line 319, in _plot_surfaces
+    err_phi = phi_pred_2d - tf.reshape(price_model(K_nn, T_nn), [N, m])
+  File "/home/tanveer/.local/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/tanveer/.local/lib/python3.10/site-packages/tensorflow/python/framework/ops.py", line 6027, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.InvalidArgumentError: {{function_node __wrapped__Sub_device_/job:localhost/replica:0/task:0/device:GPU:0}} required broadcastable shapes [Op:Sub] name: 

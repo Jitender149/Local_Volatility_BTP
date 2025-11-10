@@ -1,0 +1,245 @@
+2025-11-09 16:25:26.127352: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-09 16:25:26.199181: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-09 16:25:27.727592: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1762685728.883398  327320 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22272 MB memory:  -> device: 0, name: NVIDIA RTX A5000, pci bus id: 0000:31:00.0, compute capability: 8.6
+Simulation is running on:
+device = PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+
+Starting Sigma-Price Network Training
+
+S_t obtained by solving local volatility SDE M = 1000000 times from t = [0, 1.5]
+Training data shape: SKT=(18, 3), P=(18, 1)
+S range: [1000.00, 1000.00]
+K range: [500.00, 3000.00]
+T range: [0.30, 1.50]
+
+loss_price = 66561.921875, computation time = 0.08663129806518555
+loss_smooth = 4.5717121111010783e-07, computation time = 0.5848376750946045
+loss_pde = 0.024875996634364128, computation time = 0.043596506118774414
+computation time = 2.6078267097473145
+loss_price = 66561.921875, loss_smooth = 4.5717121111010783e-07, loss_pde = 0.026066944003105164, total_loss = 66561.921875
+
+Starting training with weights: lambda_smooth=0.001000, lambda_pde=0.000100
+Using optimizer-based adaptive weight balancing (update frequency: 1000 iterations)
+
+iter = 0:
+  Losses: price=58035.152344, smooth=0.000000, pde=1.691707
+  Weights: lambda_smooth=0.001000, lambda_pde=0.000100
+  Weighted contributions: smooth=0.000000, pde=0.000169, total=58035.152344
+  Metrics: error_sigma=0.999998, rmse_fit=393.084717
+[Iter 1000] Optimizer-based weight update:
+  Losses: price=402.037231, smooth=0.000000, pde=8200.006836
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.001100
+  Weighted contributions: smooth=0.000000, pde=9.019952
+
+[Iter 2000] Optimizer-based weight update:
+  Losses: price=416.620331, smooth=0.000000, pde=10254.799805
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.002099
+  Weighted contributions: smooth=0.000000, pde=21.527956
+
+iter = 2500:
+  Losses: price=110.333176, smooth=0.000000, pde=11429.766602
+  Weights: lambda_smooth=0.001000, lambda_pde=0.002099
+  Weighted contributions: smooth=0.000000, pde=23.994570, total=134.327744
+  Metrics: error_sigma=0.999998, rmse_fit=10.065340
+[Iter 3000] Optimizer-based weight update:
+  Losses: price=55.339783, smooth=0.000000, pde=12414.559570
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.002914
+  Weighted contributions: smooth=0.000000, pde=36.172268
+
+[Iter 4000] Optimizer-based weight update:
+  Losses: price=37.318050, smooth=0.000000, pde=14122.212891
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.003575
+  Weighted contributions: smooth=0.000000, pde=50.484608
+
+[Iter 5000] Optimizer-based weight update:
+  Losses: price=32.778107, smooth=0.000000, pde=13136.927734
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.004114
+  Weighted contributions: smooth=0.000000, pde=54.047398
+
+iter = 5000:
+  Losses: price=32.778107, smooth=0.000000, pde=13136.927734
+  Weights: lambda_smooth=0.001000, lambda_pde=0.004114
+  Weighted contributions: smooth=0.000000, pde=54.047398, total=86.825500
+  Metrics: error_sigma=0.999998, rmse_fit=5.724757
+[Iter 6000] Optimizer-based weight update:
+  Losses: price=36.779327, smooth=0.000000, pde=14100.761719
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.004549
+  Weighted contributions: smooth=0.000000, pde=64.141945
+
+[Iter 7000] Optimizer-based weight update:
+  Losses: price=179.416733, smooth=0.000000, pde=13370.774414
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005057
+  Weighted contributions: smooth=0.000000, pde=67.621681
+
+iter = 7500:
+  Losses: price=29.660671, smooth=0.000000, pde=13688.175781
+  Weights: lambda_smooth=0.001000, lambda_pde=0.005057
+  Weighted contributions: smooth=0.000000, pde=69.226913, total=98.887589
+  Metrics: error_sigma=0.999998, rmse_fit=5.445893
+[Iter 8000] Optimizer-based weight update:
+  Losses: price=29.406834, smooth=0.000000, pde=12703.047852
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005465
+  Weighted contributions: smooth=0.000000, pde=69.420685
+
+[Iter 9000] Optimizer-based weight update:
+  Losses: price=29.266462, smooth=0.000000, pde=13968.646484
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005767
+  Weighted contributions: smooth=0.000000, pde=80.552208
+
+[Iter 10000] Optimizer-based weight update:
+  Losses: price=28.433237, smooth=0.000000, pde=13150.709961
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005981
+  Weighted contributions: smooth=0.000000, pde=78.649414
+
+iter = 10000:
+  Losses: price=28.433237, smooth=0.000000, pde=13150.709961
+  Weights: lambda_smooth=0.001000, lambda_pde=0.005981
+  Weighted contributions: smooth=0.000000, pde=78.649414, total=107.082649
+  Metrics: error_sigma=0.999998, rmse_fit=5.332177
+[Iter 11000] Optimizer-based weight update:
+  Losses: price=28.339485, smooth=0.000000, pde=13549.546875
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.006110
+  Weighted contributions: smooth=0.000000, pde=82.789406
+
+[Iter 12000] Optimizer-based weight update:
+  Losses: price=27.698542, smooth=0.000000, pde=15072.944336
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.006144
+  Weighted contributions: smooth=0.000000, pde=92.601944
+
+iter = 12500:
+  Losses: price=27.879173, smooth=0.000000, pde=14174.990234
+  Weights: lambda_smooth=0.001000, lambda_pde=0.006144
+  Weighted contributions: smooth=0.000000, pde=87.085289, total=114.964462
+  Metrics: error_sigma=0.999998, rmse_fit=5.266087
+[Iter 13000] Optimizer-based weight update:
+  Losses: price=27.463003, smooth=0.000000, pde=14501.115234
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.006099
+  Weighted contributions: smooth=0.000000, pde=88.446815
+
+[Iter 14000] Optimizer-based weight update:
+  Losses: price=27.027256, smooth=0.000000, pde=14496.125977
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005987
+  Weighted contributions: smooth=0.000000, pde=86.782082
+
+[Iter 15000] Optimizer-based weight update:
+  Losses: price=26.655117, smooth=0.000000, pde=14515.526367
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005814
+  Weighted contributions: smooth=0.000000, pde=84.394913
+
+iter = 15000:
+  Losses: price=26.655117, smooth=0.000000, pde=14515.526367
+  Weights: lambda_smooth=0.001000, lambda_pde=0.005814
+  Weighted contributions: smooth=0.000000, pde=84.394913, total=111.050034
+  Metrics: error_sigma=0.999998, rmse_fit=5.162802
+[Iter 16000] Optimizer-based weight update:
+  Losses: price=71.517860, smooth=0.000000, pde=14443.523438
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005643
+  Weighted contributions: smooth=0.000000, pde=81.505928
+
+[Iter 17000] Optimizer-based weight update:
+  Losses: price=25.880526, smooth=0.000000, pde=15871.967773
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005407
+  Weighted contributions: smooth=0.000000, pde=85.825768
+
+iter = 17500:
+  Losses: price=25.753933, smooth=0.000000, pde=14540.590820
+  Weights: lambda_smooth=0.001000, lambda_pde=0.005407
+  Weighted contributions: smooth=0.000000, pde=78.626503, total=104.380432
+  Metrics: error_sigma=0.999998, rmse_fit=5.073565
+[Iter 18000] Optimizer-based weight update:
+  Losses: price=34.677567, smooth=0.000000, pde=13489.338867
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.005152
+  Weighted contributions: smooth=0.000000, pde=69.492348
+
+[Iter 19000] Optimizer-based weight update:
+  Losses: price=27.115652, smooth=0.000000, pde=14727.041992
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.004862
+  Weighted contributions: smooth=0.000000, pde=71.597321
+
+[Iter 20000] Optimizer-based weight update:
+  Losses: price=23.942665, smooth=0.000000, pde=13903.789062
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.004549
+  Weighted contributions: smooth=0.000000, pde=63.245979
+
+iter = 20000:
+  Losses: price=23.942665, smooth=0.000000, pde=13903.789062
+  Weights: lambda_smooth=0.001000, lambda_pde=0.004549
+  Weighted contributions: smooth=0.000000, pde=63.245979, total=87.188644
+  Metrics: error_sigma=0.999998, rmse_fit=4.907115
+[Iter 21000] Optimizer-based weight update:
+  Losses: price=23.512226, smooth=0.000000, pde=13917.859375
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.004219
+  Weighted contributions: smooth=0.000000, pde=58.721355
+
+[Iter 22000] Optimizer-based weight update:
+  Losses: price=21.268614, smooth=0.000000, pde=14201.044922
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.003874
+  Weighted contributions: smooth=0.000000, pde=55.015778
+
+iter = 22500:
+  Losses: price=34.092117, smooth=0.000000, pde=15776.673828
+  Weights: lambda_smooth=0.001000, lambda_pde=0.003874
+  Weighted contributions: smooth=0.000000, pde=61.119869, total=95.211990
+  Metrics: error_sigma=0.999998, rmse_fit=6.100111
+[Iter 23000] Optimizer-based weight update:
+  Losses: price=20.122057, smooth=0.000000, pde=14375.363281
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.003518
+  Weighted contributions: smooth=0.000000, pde=50.566574
+
+[Iter 24000] Optimizer-based weight update:
+  Losses: price=18.140770, smooth=0.000000, pde=14690.882812
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.003152
+  Weighted contributions: smooth=0.000000, pde=46.302856
+
+[Iter 25000] Optimizer-based weight update:
+  Losses: price=16.371153, smooth=0.000000, pde=15659.591797
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.002775
+  Weighted contributions: smooth=0.000000, pde=43.458649
+
+iter = 25000:
+  Losses: price=16.371153, smooth=0.000000, pde=15659.591797
+  Weights: lambda_smooth=0.001000, lambda_pde=0.002775
+  Weighted contributions: smooth=0.000000, pde=43.458649, total=59.829803
+  Metrics: error_sigma=0.999998, rmse_fit=4.047428
+[Iter 26000] Optimizer-based weight update:
+  Losses: price=14.760101, smooth=0.000000, pde=14997.856445
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.002398
+  Weighted contributions: smooth=0.000000, pde=35.960812
+
+[Iter 27000] Optimizer-based weight update:
+  Losses: price=13.559099, smooth=0.000000, pde=13696.708984
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.002031
+  Weighted contributions: smooth=0.000000, pde=27.815878
+
+iter = 27500:
+  Losses: price=12.195385, smooth=0.000000, pde=14005.068359
+  Weights: lambda_smooth=0.001000, lambda_pde=0.002031
+  Weighted contributions: smooth=0.000000, pde=28.442108, total=40.637493
+  Metrics: error_sigma=0.999998, rmse_fit=3.472942
+[Iter 28000] Optimizer-based weight update:
+  Losses: price=12.090698, smooth=0.000000, pde=15888.921875
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.001668
+  Weighted contributions: smooth=0.000000, pde=26.509661
+
+[Iter 29000] Optimizer-based weight update:
+  Losses: price=9.743819, smooth=0.000000, pde=15105.599609
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.001317
+  Weighted contributions: smooth=0.000000, pde=19.900331
+
+[Iter 30000] Optimizer-based weight update:
+  Losses: price=8.476986, smooth=0.000000, pde=14173.057617
+  Updated weights: lambda_smooth=0.001000, lambda_pde=0.000984
+  Weighted contributions: smooth=0.000000, pde=13.953292
+
+iter = 30000:
+  Losses: price=8.476986, smooth=0.000000, pde=14173.057617
+  Weights: lambda_smooth=0.001000, lambda_pde=0.000984
+  Weighted contributions: smooth=0.000000, pde=13.953292, total=22.430279
+  Metrics: error_sigma=0.999998, rmse_fit=2.939314
+relative rmse at the end of the training = 1.0
+smallest relative rmse during the training = 1.0
+relative error at the end of the training = 0.9999983906745911
+smallest relative error during the training = 0.9999983906745911

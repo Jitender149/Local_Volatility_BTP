@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/tanveer/poorpeople/LocalVolatility/ImpliedVolatility/tf_sigma_price_network.py", line 11, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
